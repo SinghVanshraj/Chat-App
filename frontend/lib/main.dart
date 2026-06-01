@@ -32,11 +32,11 @@ Future<void> connectGlobalSocket() async {
 
   appSocket!.onConnect((_) {
     appSocket!.emit('user_connected', userId);
-    debugPrint('✅ Global socket connected');
+    debugPrint('Global socket connected');
   });
 
-  appSocket!.onDisconnect((_) => debugPrint('⚠️ Global socket disconnected'));
-  appSocket!.onConnectError((e) => debugPrint('❌ Socket connect error: $e'));
+  appSocket!.onDisconnect((_) => debugPrint('Global socket disconnected'));
+  appSocket!.onConnectError((e) => debugPrint('Socket connect error: $e'));
 }
 
 void main() async {
